@@ -9,7 +9,6 @@
 		<title> My Online shop </title>
 		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 		<link rel="stylesheet" href="styles/style.css" media="all">	
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 		<!-- Depreciated fonts, each take an extra 330 ms to load if not commented out
 		<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
