@@ -36,7 +36,7 @@
 							</tr>
 							<tr>
 								<td align="right">Customer Password:</td>
-								<td><input type="Password" name="c_pass" required value="<?php echo $pass ?>"></td>
+								<td><input type="Password" name="c_pass"value="<?php echo $pass ?>" disabled></td>
 							</tr>
 
 							<tr>

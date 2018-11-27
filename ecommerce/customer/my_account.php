@@ -29,7 +29,7 @@
 			<!--Header starts here-->
 			<div  class="header_wrapper">
 
-				<a href="index.php"><img id="logo" src="images/logo.PNG"></a>
+				<a href="../index.php"><img id="logo" src="images/logo.PNG"></a>
 
 			</div>
 			<!--Header ends here-->
@@ -39,8 +39,8 @@
 
 
 				<ul id="menu">
-					<li><a href="/ecommerce/index.php">Home</li>
-					<li><a href="all_products.php">Products</li>
+					<li><a href="../index.php">Home</li>
+					<li><a href="../all_products.php">Products</li>
 					<li><a href="customer/my_account.php">My Account</li>
 					<li><a href="#">Sign Up</li>
 					<li><a href="cart.php">Shopping Cart</li>
@@ -103,6 +103,7 @@
 						<li><a href="my_account.php?edit_account">Edit Account</a></li>
 						<li><a href="my_account.php?change_pass">Change Password</a></li>
 						<li><a href="my_account.php?delete_account">Delete Account</a></li>
+						<li><a href="logout.php?delete_account">Logout</a></li>
 
 					<ul>
 
@@ -162,6 +163,10 @@
 
 							if (isset($_GET['edit_account'])) {
 								include("edit_account.php");
+							}
+
+							if (isset($_GET['change_pass'])) {
+								include("change_pass.php");
 							}
 						?>
 						
