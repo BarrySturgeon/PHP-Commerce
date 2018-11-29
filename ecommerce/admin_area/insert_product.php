@@ -12,14 +12,14 @@
 
 	</head>
 
-<body bgcolor="skyblue">
+<body bgcolor="gainsboro">
 	
 
 	<form action="insert_product.php" method="post" enctype="multipart/form-data">
 
-		<table align="center" width="700" border="2" bgcolor="lightgrey">
+		<table align="center" width="795" height="600" bgcolor="white">
 			<tr align="center">
-				<td colspan="7"><h2>Insert new post here</h2></td>
+				<td colspan="7"><h2>Insert new Product:</h2></td>
 			</tr>
 
 			<tr>
@@ -89,7 +89,7 @@
 
 			<tr>
 				<td align="center"><b>Product Description:</b></td>
-				<td><textarea name="product_desc" cols="20" rows="10"></textarea></td>
+				<td style="padding-right:25px"><textarea name="product_desc" cols="15" rows="10" ></textarea></td>
 			</tr>
 
 			<tr>
@@ -99,7 +99,14 @@
 
 			<tr>
 				<td align="center"><b>Product Branch:</b></td>
-				<td><input type="number" name="product_branch" size="60" placeholder="Branches:1-JHB. 2-PTA:A 3-PTA:B" ></td>
+				<td >
+					<select name="product_branch">
+						<option value="1">1 - JHB Branch</option>
+						<option value="2">2 - PTA:A Branch</option>
+						<option value="3">3 - PTA:B Branch</option>
+					</select>
+				</td>
+
 			</tr>
 
 			<tr align="center">
@@ -140,7 +147,7 @@
 
 	  	if ($insert_pro) {
 	  		echo "<script>alert('Product has been inserted')</script>";
-	  		echo "<script>window.open('insert_product.php','_self')</script>";
+	  		echo "<script>window.open('index.php?insert_product','_self')</script>";
 
 	  	}
 	

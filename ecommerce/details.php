@@ -37,7 +37,7 @@
 
 
 				<ul id="menu">
-					<li><a href="#">Home</li>
+					<li><a href="index.php">Home</li>
 					<li><a href="#">Products</li>
 					<li><a href="#">My Account</li>
 					<li><a href="#">Sign Up</li>
@@ -119,7 +119,7 @@
 	 				
 	 							<a href = index.php style='float:left;'>Go Back</a>
 
-	 							<a href = 'index.php?pro_id=$pro_id'><button style='float:right;'>Add to cart</button></a>
+	 							<a href = 'index.php?pro_id=$pro_id'><button class='button-detail' style='float:right;'>Add to cart</button></a>
 
 	 						</div>";
 	 						}

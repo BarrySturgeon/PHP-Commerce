@@ -159,9 +159,9 @@ function getPro(){
 
 	 			<p><b> R $pro_price</b> </p>
 	 			
-	 			<a href = 'details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+	 			<a href = 'details.php?pro_id=$pro_id' style='float:left; text-decoration:none; color:black;'>Details</a>
 
-	 			<a href = 'index.php?add_cart=$pro_id'><button style='float:right;'>Add to cart</button></a>
+	 			<a href = 'index.php?add_cart=$pro_id'><button class='button' style='float:right;'>Add to cart</button></a>
 
 	 		</div>
 
