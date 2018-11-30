@@ -206,7 +206,7 @@ function getCatPro(){
 	 			
 	 			<a href = 'details.php?pro_id=$pro_id' style='float:left;'>Details</a>
 
-	 			<a href = 'index.php?pro_id=$pro_id'><button style='float:right;'>Add to cart</button></a>
+	 			<a href = 'index.php?pro_id=$pro_id'><button class='button' style='float:right;'>Add to cart</button></a>
 
 	 		</div>
 
@@ -251,7 +251,7 @@ function getBrandPro(){
 	 			
 	 			<a href = 'details.php?pro_id=$pro_id' style='float:left;'>Details</a>
 
-	 			<a href = 'index.php?pro_id=$pro_id'><button style='float:right;'>Add to cart</button></a>
+	 			<a href = 'index.php?pro_id=$pro_id'><button class='button' style='float:right;'>Add to cart</button></a>
 
 	 		</div>
 

@@ -50,7 +50,7 @@
 				<div id="form">
 					<form method="get" action="results.php" enctype="multipart/form-data">
 						<input type="text" name="user_query" placeholder="Search for something">
-						<input type="submit" name="search" value="Search">
+						<input class="button" type="submit" name="search" value="Search">
 					</form>
 				</div> 
 				
@@ -72,6 +72,35 @@
 
 			<!--Content wrapper starts-->
 			<div class="content_wrapper">
+
+				<div id="shopping_cart">
+						<span style="float:right; font-size: 14px; padding: 5px; line-height: 40px;">
+
+							<?php 
+								if (isset($_SESSION['customer_email'])) {
+									echo "<b>Welcome </b>". $_SESSION['customer_email'] . "<b>Your</b>";
+								}
+								else{
+									echo "<b>Welcome Guest</b>";
+								}
+
+							?>
+
+						 	 <b style="color: yellow">Shopping Cart:</b> Total Items: <?php total_items(); ?> Total Price: <?php total_price(); ?> <a href="cart.php" style="text-decoration: none;">Go to Cart</a><br>
+
+							<?php
+
+							if (!isset($_SESSION['customer_email'])) {
+								echo "<a href='checkout.php' style='text-decoration:none;'>Login</a>";
+							}
+							else{
+								echo "<a href='logout.php'>Logout</a>";
+							}
+
+							 ?>
+
+						</span>
+					</div>
 
 				<div id="sidebar">
 
@@ -96,34 +125,7 @@
 				<div id="content_area">
 					<?php cart(); ?>
 
-					<div id="shopping_cart">
-						<span style="float:right; font-size: 14px; padding: 5px; line-height: 40px;">
-
-							<?php 
-								if (isset($_SESSION['customer_email'])) {
-									echo "<b>Welcome </b>". $_SESSION['customer_email'] . "<b>Your</b>";
-								}
-								else{
-									echo "<b>Welcome Guest</b>";
-								}
-
-							?>
-
-						 	 <b style="color: yellow">Shopping Cart:</b> Total Items: <?php total_items(); ?> Total Price: <?php total_price(); ?> <a href="cart.php" style="text-decoration: none;">Go to Cart</a>
-
-							<?php
-
-							if (!isset($_SESSION['customer_email'])) {
-								echo "<a href='checkout.php'>Login</a>";
-							}
-							else{
-								echo "<a href='logout.php'>Logout</a>";
-							}
-
-							 ?>
-
-						</span>
-					</div>
+					
 
 
 					<div id="product_box">

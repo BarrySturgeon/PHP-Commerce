@@ -98,6 +98,11 @@
 			</tr>
 
 			<tr>
+				<td align="center"><b>Product Model Number:</b></td>
+				<td><input type="text" name="product_model_num" required size="60"></td>
+			</tr>
+
+			<tr>
 				<td align="center"><b>Product Branch:</b></td>
 				<td >
 					<select name="product_branch">
@@ -134,6 +139,7 @@
 		$product_desc = $_POST['product_desc'];
 		$product_keywords = $_POST['product_keywords'];
 		$product_branch = $_POST['product_branch'];
+		$product_model_num = $_POST['product_model_num'];
 
 		//getting image
 		$product_image = $_FILES['product_image']['name'];
@@ -141,7 +147,7 @@
 
 		move_uploaded_file($product_image_tmp, "product_images/$product_image");
 
-	  	$insert_product = "insert into products (product_cat,product_brand, product_title, product_price, product_desc, product_image, product_keywords, product_branch) values ('$product_cat','$product_brand','$product_title','$product_price','$product_desc','$product_image','$product_keywords', '$product_branch')";
+	  	$insert_product = "insert into products (product_cat,product_brand, product_title, product_price, product_desc, product_image, product_keywords, product_branch, product_model_num) values ('$product_cat','$product_brand','$product_title','$product_price','$product_desc','$product_image','$product_keywords', '$product_branch', '$product_model_num')";
 
 	  	$insert_pro = mysqli_query($con, $insert_product);
 

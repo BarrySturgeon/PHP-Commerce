@@ -18,7 +18,7 @@
 
 		<div id="right">
 			<br>
-			<h2 style="text-align: center; ">Manage Content</h2>
+			<a style="text-decoration: none; color: black;" href="index.php"><h2 style="text-align: center; ">Manage Content</h2></a>
 			<br>
 
 			<a href="index.php?insert_product">Insert Product</a>
@@ -38,6 +38,7 @@
 		</div>
 
 		<div id="left">
+
 			
 			<?php
 				if (isset($_GET['insert_product'])) {
@@ -50,6 +51,10 @@
 
 				if (isset($_GET['edit_pro'])) {
 					include("edit_pro.php");
+				}
+
+				if (isset($_GET['insert_cat'])) {
+					include("insert_cat.php");
 				}
 
 			?>

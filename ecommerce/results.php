@@ -48,7 +48,7 @@
 				<div id="form">
 					<form method="get" action="results.php" enctype="multipart/form-data">
 						<input type="text" name="user_query" placeholder="Search for something">
-						<input type="submit" name="search" value="Search">
+						<input class="button" type="submit" name="search" value="Search">
 					</form>
 				</div>
 
@@ -60,6 +60,14 @@
 
 			<!--Content wrapper starts-->
 			<div class="content_wrapper">
+
+				<div id="shopping_cart">
+						<span style="float:right; font-size: 18px; padding: 5px; line-height: 40px;">
+
+							Welcome Guest! <b style="color: yellow">Shopping Cart:</b>Total Items: Total Price:<a href="cart.php">Go to Cart</a>
+
+						</span>
+					</div>
 
 				<div id="sidebar">
 
@@ -83,13 +91,7 @@
 
 				<div id="content_area">
 
-					<div id="shopping_cart">
-						<span style="float:right; font-size: 18px; padding: 5px; line-height: 40px;">
-
-							Welcome Guest! <b style="color: yellow">Shopping Cart:</b>Total Items: Total Price:<a href="cart.php">Go to Cart</a>
-
-						</span>
-					</div>
+					
 
 					<div id="product_box">
 						<?php 			
@@ -118,7 +120,7 @@
 	 			
 	 						<a href = 'details.php?pro_id=$pro_id' style='float:left;'>Details</a>
 
-	 						<a href = 'index.php?pro_id=$pro_id'><button style='float:right;'>Add to cart</button></a>
+	 						<a href = 'index.php?pro_id=$pro_id'><button class='button' style='float:right;'>Add to cart</button></a>
 
 	 						</div>
 

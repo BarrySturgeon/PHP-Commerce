@@ -74,6 +74,31 @@
 			<!--Content wrapper starts-->
 			<div class="content_wrapper">
 
+				<div id="shopping_cart">
+						<span style="float:right; font-size: 14px; padding: 5px; line-height: 40px;">
+
+							<?php 
+								if (isset($_SESSION['customer_email'])) {
+									echo "<b>Welcome </b>". $_SESSION['customer_email'];
+								}
+							?>
+
+						 	 
+
+							<?php
+
+							if (!isset($_SESSION['customer_email'])) {
+								echo "<a href='checkout.php'>Login</a>";
+							}
+							else{
+								echo "<a href='logout.php'>Logout</a>";
+							}
+
+							 ?>
+
+						</span>
+					</div>
+
 				<div id="sidebar">
 
 					<div id="sidebar_title" style="text-decoration: none;">My Account</div>
@@ -115,30 +140,7 @@
 				<div id="content_area">
 					<?php cart(); ?>
 
-					<div id="shopping_cart">
-						<span style="float:right; font-size: 14px; padding: 5px; line-height: 40px;">
-
-							<?php 
-								if (isset($_SESSION['customer_email'])) {
-									echo "<b>Welcome </b>". $_SESSION['customer_email'];
-								}
-							?>
-
-						 	 
-
-							<?php
-
-							if (!isset($_SESSION['customer_email'])) {
-								echo "<a href='checkout.php'>Login</a>";
-							}
-							else{
-								echo "<a href='logout.php'>Logout</a>";
-							}
-
-							 ?>
-
-						</span>
-					</div>
+					
 
 
 					<div id="product_box">

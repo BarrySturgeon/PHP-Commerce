@@ -74,6 +74,35 @@
 			<!--Content wrapper starts-->
 			<div class="content_wrapper">
 
+				<div id="shopping_cart">
+						<span style="float:right; font-size: 14px; padding: 5px; line-height: 40px;">
+
+							<?php 
+								if (isset($_SESSION['customer_email'])) {
+									echo "<b>Welcome </b>". $_SESSION['customer_email'] . "<b>Your</b>";
+								}
+								else{
+									echo "<b>Welcome Guest</b>";
+								}
+
+							?>
+
+							 <b style="color: yellow">Shopping Cart:</b> Total Items: <?php total_items(); ?> Total Price: <?php total_price(); ?> <a href="index.php" style="text-decoration: none;">Back to shop</a> <br>
+
+							<?php
+
+							if (!isset($_SESSION['customer_email'])) {
+								echo "<a href='checkout.php' style='text-decoration:none;'>Login</a>";
+							}
+							else{
+								echo "<a href='logout.php'>Logout</a>";
+							}
+
+							 ?>
+
+						</span>
+					</div>
+
 				<div id="sidebar">
 
 					<div id="sidebar_title">Categories</div>
@@ -97,34 +126,7 @@
 				<div id="content_area">
 					<?php cart(); ?>
 
-					<div id="shopping_cart">
-						<span style="float:right; font-size: 14px; padding: 5px; line-height: 40px;">
-
-							<?php 
-								if (isset($_SESSION['customer_email'])) {
-									echo "<b>Welcome </b>". $_SESSION['customer_email'] . "<b>Your</b>";
-								}
-								else{
-									echo "<b>Welcome Guest</b>";
-								}
-
-							?>
-
-							 <b style="color: yellow">Shopping Cart:</b> Total Items: <?php total_items(); ?> Total Price: <?php total_price(); ?> <a href="index.php">Back to shop</a>
-
-							<?php
-
-							if (!isset($_SESSION['customer_email'])) {
-								echo "<a href='checkout.php'>Login</a>";
-							}
-							else{
-								echo "<a href='logout.php'>Logout</a>";
-							}
-
-							 ?>
-
-						</span>
-					</div>
+					
 
 
 					<div id="product_box">
@@ -166,7 +168,7 @@
 									<td><?php echo $product_title; ?><br>
 										<img src="admin_area/product_images/<?php echo $product_image;?>" width="60" height="60">
 									</td>
-									<td><input type="text" size="4" name="qty" value="<?php echo $_SESSION['qty'];?>"/></td>
+									<td><input type="text" size="4" name="qty" value="<?php echo $_SESSION['qty']; ?>"/></td>
 									<?php 
 									if(isset($_POST['update_cart'])){
 						

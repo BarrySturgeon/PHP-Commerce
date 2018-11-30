@@ -27,7 +27,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }body{
 	font-family: 'Poppins', sans-serif;
-	background: url(/ecommerce/images/folk-pattern.png) repeat 0 0;
+	background: url(/ecommerce/images/tic-tac-toe.png) repeat 0 0;
 	/*font-family: 'Old Standard TT', serif;*/
 	/*font-family: 'Cormorant Garamond', serif;*/
 
@@ -37,7 +37,8 @@ footer, header, hgroup, menu, nav, section {
 	width: 1000px;
 	height: auto;
 	margin: auto;
-
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+	background-color: white;
 }
 
 .header_wrapper{
@@ -93,6 +94,136 @@ footer, header, hgroup, menu, nav, section {
 	
 }
 
+
+
+.content_wrapper{
+	width: 1000px;
+	margin: auto;
+	background: gainsboro;
+}
+
+
+#content_area{
+	background-color: gainsboro;
+	width: 800px;
+	float: right;
+
+}
+
+#sidebar{
+	width: 200px;
+	height: auto;
+	
+	background-color: white;
+	float: left;
+	border-radius: 20px;
+
+	
+}
+
+#sidebar_title{
+	background-color: gainsboro;
+	background-image: linear-gradient(-90deg, lightgrey, gainsboro);
+	color: black;
+	font-size: 22px;
+	padding: 20px;
+	padding-left: 40px;
+	text-align: center;
+	text-decoration: none;
+
+}
+
+#sidebar_style{
+	text-align: center;
+	background-color: white;
+}
+
+#sidebar_style li{
+	list-style: none;
+	padding: 5px; 
+	margin: 5px;
+	text-decoration: none;
+}
+
+#sidebar_style a{
+	color: black;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+#sidebar_style a:hover{
+	color: yellow;
+	font-weight: bolder; 
+	text-decoration: none;
+
+}
+
+#product_box{
+	width: 780px;
+	text-align:center;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	align-items:inherit;
+}
+
+#single_product{
+	float: left;
+	margin-left: 40px;
+	padding: 10px;	
+}
+
+#single_product img{
+	border: 2px solid black;
+	border-radius: 20px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#shopping_cart {
+	width: 1000px;
+	height: 50px;
+	background: darkgray;
+	color: white;
+	float: right;
+
+	/*border-radius: 25px;*/
+}
+
+#footer{
+	width: 1000px;
+	height: 100px;
+	background: grey;
+	clear: both;
+
+}
+
+.button{
+	background-color: #555555;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+}
+
+.button-detail{
+	background-color:  #555555;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 /**
 
 from above #form
@@ -134,122 +265,6 @@ border-radius: 40px;
 	padding: 0 6px;
 }
 
+
+background-color: white;
 **/
-
-.content_wrapper{
-	width: 1000px;
-	margin: auto;
-	background: gainsboro;
-}
-
-
-#content_area{
-	background-color: gainsboro;
-	width: 800px;
-	float: right;
-}
-
-#sidebar{
-	width: 200px;
-	height: auto;
-	background: lightgrey;
-	float: left;
-	border-radius: 20px;
-}
-
-#sidebar_title{
-	background-color: white;
-	color: black;
-	font-size: 22px;
-	padding: 20px;
-	padding-left: 40px;
-	text-align: center;
-	text-decoration: none;
-}
-
-#sidebar_style{
-	text-align: center;
-}
-
-#sidebar_style li{
-	list-style: none;
-	padding: 5px; 
-	margin: 5px;
-	text-decoration: none;
-}
-
-#sidebar_style a{
-	color: black;
-	font-size: 20px;
-	text-decoration: none;
-}
-
-#sidebar_style a:hover{
-	color: yellow;
-	font-weight: bolder; 
-	text-decoration: none;
-
-}
-
-#product_box{
-	width: 780px;
-	text-align:center;
-	margin-left: 30px;
-	margin-bottom: 10px;
-	align-items:inherit;
-}
-
-#single_product{
-	float: left;
-	margin-left: 40px;
-	padding: 10px;	
-}
-
-#single_product img{
-	border: 2px solid black;
-	border-radius: 20px;
-}
-
-#shopping_cart {
-	width: 800px;
-	height: 50px;
-	background: darkgray;
-	color: white;
-	/*border-radius: 25px;*/
-}
-
-#footer{
-	width: 1000px;
-	height: 100px;
-	background: grey;
-	clear: both;
-
-}
-
-.button{
-	background-color: #555555;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 2px 1px;
-    cursor: pointer;
-}
-
-.button-detail{
-	background-color:  #555555;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}

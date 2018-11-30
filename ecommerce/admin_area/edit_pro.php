@@ -22,6 +22,7 @@
 			$pro_cat = $row_pro['product_cat'];
 			$pro_brand = $row_pro['product_brand'];
 			$pro_branch = $row_pro['product_branch'];
+			$pro_model_num = $row_pro['product_model_num'];
 
 			$get_cat = "select * from categories where cat_id='$pro_cat'";
 			$run_cat = mysqli_query($con, $get_cat);
@@ -50,12 +51,15 @@
 <body bgcolor="skyblue">
 	
 
-	<form action="insert_product.php" method="post" enctype="multipart/form-data">
+	<form action="" method="post" enctype="multipart/form-data">
 
 		<table align="center" width="795" height="600" border="2" bgcolor="white">
 			<tr align="center">
-				<td colspan="7"><h2>Edit & Update Product:</h2></td>
+
+				<td colspan="7"><h2>Edit & Update Product:</h2><br><h3>When updating, please ensure all categories are corrected</h3><br></td>
 			</tr>
+
+
 
 			<tr>
 				<td align="center"><b>Product Title:</b></td>
@@ -133,6 +137,11 @@
 			</tr>
 
 			<tr>
+				<td align="center"><b>Product Model Number:</b></td>
+				<td><input type="text" name="product_model_num" required size="60"></td>
+			</tr>
+
+			<tr>
 				<td align="center"><b>Product Branch:</b></td>
 				<td >
 					<select name="product_branch">
@@ -160,9 +169,10 @@
 
 <?php 
 	
-	if (isset($_POST['insert_post'])) {
+	if (isset($_POST['update_product'])) {
 		
 		//getting text data from fields
+		$update_id = $pro_id;
 		$product_title = $_POST['product_title'];
 		$product_cat = $_POST['product_cat'];
 		$product_brand = $_POST['product_brand'];
@@ -170,6 +180,7 @@
 		$product_desc = $_POST['product_desc'];
 		$product_keywords = $_POST['product_keywords'];
 		$product_branch = $_POST['product_branch'];
+		$product_model_num = $_POST['product_model_num'];
 
 		//getting image
 		$product_image = $_FILES['product_image']['name'];
@@ -177,13 +188,13 @@
 
 		move_uploaded_file($product_image_tmp, "product_images/$product_image");
 
-	  	$insert_product = "insert into products (product_cat,product_brand, product_title, product_price, product_desc, product_image, product_keywords, product_branch) values ('$product_cat','$product_brand','$product_title','$product_price','$product_desc','$product_image','$product_keywords', '$product_branch')";
+	  	$update_product = "update products set product_cat='$product_cat', product_brand='$product_brand', product_title='$product_title', product_price='$product_price', product_desc='$product_desc', product_image='$product_image',product_keywords='$product_keywords', product_branch='$product_branch', product_model_num='$product_model_num' where product_id='$update_id'";
 
-	  	$insert_pro = mysqli_query($con, $insert_product);
+	  	$run_product = mysqli_query($con, $update_product);
 
-	  	if ($insert_pro) {
-	  		echo "<script>alert('Product has been inserted')</script>";
-	  		echo "<script>window.open('index.php?insert_product','_self')</script>";
+	  	if ($run_product) {
+	  		echo "<script>alert('Product has been updated!')</script>";
+	  		echo "<script>window.open('index.php?view_product','_self')</script>";
 
 	  	}
 	
