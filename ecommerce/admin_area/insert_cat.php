@@ -20,7 +20,7 @@ include("includes/db.php");
 	
 		if($run_cat){	
 			echo "<script>alert('New Category has been inserted!')</script>";
-			echo "<script>window.open('index.php?insert_cat','_self')</script>";
+			echo "<script>window.open('index.php?view_cats','_self')</script>";
 	}
 	}
 
