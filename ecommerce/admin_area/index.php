@@ -23,7 +23,7 @@
 
 			<a href="index.php?insert_product">Insert Product</a>
 			<a href="index.php?view_product">View All Product</a>
-			<a href="index.php?insert_cat">Insert Category</a>
+			<a href="index.php?insert_cat">Insert New Category</a>
 			<a href="index.php?view_cats">View all Category</a>
 			<a href="index.php?insert_brand">Insert New Brand</a>
 			<a href="index.php?view_brands">View All Brands</a>

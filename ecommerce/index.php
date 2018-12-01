@@ -28,7 +28,7 @@
 			<!--Header starts here-->
 			<div  class="header_wrapper">
 
-				<a href="index.php"><img id="logo" src="images/logo.PNG"></a>
+				<a href="index.php"><img id="logo" src="images/new2.png"></a>
 
 			</div>
 			<!--Header ends here-->
