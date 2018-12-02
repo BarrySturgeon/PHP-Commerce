@@ -104,7 +104,7 @@
 
 				<div id="sidebar">
 
-					<div id="sidebar_title" style="text-decoration: none;">Categories</div>
+					<div id="sidebar_title">Categories</div>
 					
 					<ul id="sidebar_style">
 						
