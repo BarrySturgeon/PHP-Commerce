@@ -65,6 +65,10 @@
 					include("edit_cat.php");
 				}
 
+				if (isset($_GET['insert_brand'])) {
+					include("insert_brand.php");
+				}
+
 			?>
 
 		</div>
