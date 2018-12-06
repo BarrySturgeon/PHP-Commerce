@@ -1,6 +1,13 @@
+<?php 
+	if (!isset($_SESSION['user_email'])) {
+		echo "<script>window.open('login.php?not_admin=You are not an Admin!','_self')</script>";
+	}
+	else{
 
+	
+?>
 
-<table width="798" align="center">
+<table width="798" align="center" style="background-color: white;">
 
 	<tr align="center">
 		<td colspan="6"><h2>View All Customers</h2></td>
@@ -48,3 +55,5 @@
 	<?php } ?>
 	
 </table>
+
+<?php } ?>
